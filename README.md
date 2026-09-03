@@ -151,15 +151,34 @@ An interactive **Streamlit web app** ships inside this repo, under [`app/`](app/
 </p>
 
 <p align="center">
-  <img src="./assets/screenshots/streamlit-home.png" alt="Streamlit app - home" width="49%"/>
-  <img src="./assets/screenshots/streamlit-transcription.png" alt="Streamlit app - transcription result" width="49%"/>
+  <img src="./assets/screenshots/streamlit_home.png" alt="Streamlit app - home" width="49%"/>
+  <img src="./assets/screenshots/streamlit_transcription.png" alt="Streamlit app - transcription result" width="49%"/>
 </p>
 
-Example transcriptions produced live by the app:
+### Real transcriptions produced live by the app
 
-> *"loolu aussi am na solo"*
->
-> *"parce que bu ñu waxee koom nekkul nag li tool bi génne mais ñaata nga dugal ñaatal mooy ci génn"*
+<table>
+<tr>
+<th width="50%">Short phrase</th>
+<th width="50%">Long phrase</th>
+</tr>
+<tr>
+<td><img src="./assets/screenshots/transcription_phrase_courte.png" alt="Short-phrase transcription"/></td>
+<td><img src="./assets/screenshots/transcription_phrase_longue.png" alt="Long-phrase transcription"/></td>
+</tr>
+<tr>
+<td><i>"loolu aussi am na solo"</i></td>
+<td><i>"parce que bu ñu waxee koom nekkul nag li tool bi génne mais ñaata nga dugal ñaatal mooy ci génn"</i></td>
+</tr>
+</table>
+
+### Model on Hugging Face
+
+<p align="center">
+  <a href="https://huggingface.co/Bakis/ASR-Model-Wav2vec2">
+    <img src="./assets/screenshots/huggingface_model_repo.png" alt="Hugging Face model page" width="90%"/>
+  </a>
+</p>
 
 **Run it locally in one line:**
 
@@ -296,24 +315,6 @@ The modular code under `src/` is the production-ready extraction of that noteboo
 
 ---
 
-## Author
-
-**Khalifa Ababacar Seck** — Data Engineer · Analytics Engineer · Data Analyst
-
-<p>
-  <a href="https://github.com/KhalifaSeck"><img src="https://img.shields.io/badge/GitHub-KhalifaSeck-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="https://www.linkedin.com/in/khalifa-ababacar-seck-a1632a1a7/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="mailto:seckhalifaa@gmail.com"><img src="https://img.shields.io/badge/Email-seckhalifaa%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-</p>
-
----
-
 ## License
 
 Released under the [MIT License](LICENSE).
-
-## Acknowledgements
-
-- [IndabaX Senegal](https://huggingface.co/IndabaxSenegal) for open-sourcing Wolof speech data.
-- [Meta AI](https://huggingface.co/facebook) for the XLS-R model family.
-- [Hugging Face](https://huggingface.co/) for the Transformers, Datasets and Evaluate libraries.
