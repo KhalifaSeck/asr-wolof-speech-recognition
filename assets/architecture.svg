@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="Wolof ASR training pipeline">
+  <defs>
+    <linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#0f1729"/>
+    </linearGradient>
+    <linearGradient id="flowA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d9ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <marker id="arrowA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a855f7"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#bgA)" rx="12"/>
+
+  <text x="30" y="40" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#e2e8f0" letter-spacing="2">WOLOF ASR TRAINING PIPELINE</text>
+  <rect x="30" y="50" width="60" height="2" fill="url(#flowA)"/>
+
+  <g font-family="'Inter', sans-serif" transform="translate(30, 90)">
+
+    <g>
+      <rect x="0" y="0" width="150" height="140" rx="10" fill="#0f1729" stroke="#00d9ff" stroke-width="1.5" stroke-opacity="0.5"/>
+      <text x="75" y="24" text-anchor="middle" font-size="10" font-weight="700" fill="#00d9ff" letter-spacing="1.5">1 · DATA</text>
+      <line x1="20" y1="34" x2="130" y2="34" stroke="#00d9ff" stroke-opacity="0.3"/>
+      <text x="75" y="60" text-anchor="middle" font-size="11" fill="#e2e8f0">IndabaX Senegal</text>
+      <text x="75" y="82" text-anchor="middle" font-size="11" fill="#e2e8f0">asr-wolof-dataset</text>
+      <text x="75" y="104" text-anchor="middle" font-size="11" fill="#e2e8f0">16 kHz audio</text>
+      <text x="75" y="126" text-anchor="middle" font-size="11" fill="#94a3b8">train / val / test</text>
+    </g>
+
+    <line x1="155" y1="70" x2="175" y2="70" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowA)"/>
+
+    <g transform="translate(180, 0)">
+      <rect x="0" y="0" width="150" height="140" rx="10" fill="#0f1729" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/>
+      <text x="75" y="24" text-anchor="middle" font-size="10" font-weight="700" fill="#22d3ee" letter-spacing="1.5">2 · PREPROCESSING</text>
+      <line x1="20" y1="34" x2="130" y2="34" stroke="#22d3ee" stroke-opacity="0.3"/>
+      <text x="75" y="60" text-anchor="middle" font-size="11" fill="#e2e8f0">Text cleaning</text>
+      <text x="75" y="82" text-anchor="middle" font-size="11" fill="#e2e8f0">Noise reduction</text>
+      <text x="75" y="104" text-anchor="middle" font-size="11" fill="#e2e8f0">Length filtering</text>
+      <text x="75" y="126" text-anchor="middle" font-size="11" fill="#94a3b8">1s – 18s clips</text>
+    </g>
+
+    <line x1="335" y1="70" x2="355" y2="70" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowA)"/>
+
+    <g transform="translate(360, 0)">
+      <rect x="0" y="0" width="150" height="140" rx="10" fill="#0f1729" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.5"/>
+      <text x="75" y="24" text-anchor="middle" font-size="10" font-weight="700" fill="#a855f7" letter-spacing="1.5">3 · TOKENIZER</text>
+      <line x1="20" y1="34" x2="130" y2="34" stroke="#a855f7" stroke-opacity="0.3"/>
+      <text x="75" y="60" text-anchor="middle" font-size="11" fill="#e2e8f0">Custom Wolof vocab</text>
+      <text x="75" y="82" text-anchor="middle" font-size="11" fill="#e2e8f0">Latin + à á é ñ ŋ</text>
+      <text x="75" y="104" text-anchor="middle" font-size="11" fill="#e2e8f0">CTC tokenizer</text>
+      <text x="75" y="126" text-anchor="middle" font-size="11" fill="#94a3b8">[UNK] [PAD] |</text>
+    </g>
+
+    <line x1="515" y1="70" x2="535" y2="70" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowA)"/>
+
+    <g transform="translate(540, 0)">
+      <rect x="0" y="0" width="150" height="140" rx="10" fill="#0f1729" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/>
+      <text x="75" y="24" text-anchor="middle" font-size="10" font-weight="700" fill="#14b8a6" letter-spacing="1.5">4 · MODEL</text>
+      <line x1="20" y1="34" x2="130" y2="34" stroke="#14b8a6" stroke-opacity="0.3"/>
+      <text x="75" y="60" text-anchor="middle" font-size="11" fill="#e2e8f0">Wav2Vec2 XLS-R</text>
+      <text x="75" y="82" text-anchor="middle" font-size="11" fill="#e2e8f0">facebook/300M</text>
+      <text x="75" y="104" text-anchor="middle" font-size="11" fill="#e2e8f0">Feature extractor</text>
+      <text x="75" y="126" text-anchor="middle" font-size="11" fill="#94a3b8">frozen</text>
+    </g>
+
+    <line x1="695" y1="70" x2="715" y2="70" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowA)"/>
+
+    <g transform="translate(720, 0)">
+      <rect x="0" y="0" width="150" height="140" rx="10" fill="#0f1729" stroke="#00d9ff" stroke-width="1.5" stroke-opacity="0.5"/>
+      <text x="75" y="24" text-anchor="middle" font-size="10" font-weight="700" fill="#00d9ff" letter-spacing="1.5">5 · TRAINING</text>
+      <line x1="20" y1="34" x2="130" y2="34" stroke="#00d9ff" stroke-opacity="0.3"/>
+      <text x="75" y="60" text-anchor="middle" font-size="11" fill="#e2e8f0">CTC loss  ·  fp16</text>
+      <text x="75" y="82" text-anchor="middle" font-size="11" fill="#e2e8f0">16 epochs · bs 8</text>
+      <text x="75" y="104" text-anchor="middle" font-size="11" fill="#e2e8f0">lr 1e-4 · cosine</text>
+      <text x="75" y="126" text-anchor="middle" font-size="11" fill="#94a3b8">Early stopping</text>
+    </g>
+
+    <line x1="875" y1="70" x2="895" y2="70" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowA)"/>
+
+    <g transform="translate(900, 0)">
+      <rect x="0" y="0" width="240" height="140" rx="10" fill="#0f1729" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.5"/>
+      <text x="120" y="24" text-anchor="middle" font-size="10" font-weight="700" fill="#a855f7" letter-spacing="1.5">6 · EVALUATION &amp; INFERENCE</text>
+      <line x1="20" y1="34" x2="220" y2="34" stroke="#a855f7" stroke-opacity="0.3"/>
+      <text x="120" y="60" text-anchor="middle" font-size="11" fill="#e2e8f0">WER · CER · Accuracy · Precision</text>
+      <text x="120" y="82" text-anchor="middle" font-size="11" fill="#e2e8f0">Held-out test set</text>
+      <text x="120" y="104" text-anchor="middle" font-size="11" fill="#e2e8f0">Error analysis (char / confusion)</text>
+      <text x="120" y="126" text-anchor="middle" font-size="11" fill="#94a3b8">Inference on new audio</text>
+    </g>
+  </g>
+
+  <g transform="translate(30, 280)">
+    <rect x="0" y="0" width="1140" height="40" rx="8" fill="#0f1729" stroke="#334155"/>
+    <text x="20" y="25" font-size="11" font-weight="700" fill="#14b8a6" letter-spacing="1.5">STACK</text>
+    <text x="90" y="25" font-size="12" fill="#94a3b8">Python  ·  PyTorch  ·  Hugging Face Transformers  ·  Datasets  ·  Evaluate  ·  Librosa  ·  noisereduce  ·  jiwer  ·  scikit-learn</text>
+  </g>
+</svg>
