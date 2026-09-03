@@ -167,8 +167,6 @@ An interactive **Streamlit web app** ships inside this repo, under [`app/`](app/
 <td><img src="./assets/screenshots/transcription_phrase_longue.png" alt="Long-phrase transcription"/></td>
 </tr>
 <tr>
-<td><i>"loolu aussi am na solo"</i></td>
-<td><i>"parce que bu ñu waxee koom nekkul nag li tool bi génne mais ñaata nga dugal ñaatal mooy ci génn"</i></td>
 </tr>
 </table>
 
